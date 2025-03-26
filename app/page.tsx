@@ -47,7 +47,7 @@ export default function SnakeGame() {
       return;
     }
     
-    // Only allow perpendicular movement (prevent 180° turns)
+    // only allow perpendicular mvmt (prevent 180° turns)
     if (
       (newDirection.x !== 0 && direction?.x === 0) || 
       (newDirection.y !== 0 && direction?.y === 0)
@@ -68,20 +68,20 @@ export default function SnakeGame() {
     
         if (isCollision(newHead, prevSnake)) {
           setIsGameOver(true);
-          return prevSnake; // Return the previous snake if collision occurs
+          return prevSnake; // return previous snake if collision occurs
         }
     
-        const newSnake = [newHead, ...prevSnake]; // Add new head to the snake
+        const newSnake = [newHead, ...prevSnake]; // add new head to snake
     
         // Check if the snake has eaten the food
         if (food && newHead.x === food.x && newHead.y === food.y) {
-          setFood(randomFood(newSnake)); // Generate new food using the new snake state
-          return newSnake; // Return newSnake to grow the snake immediately
+          setFood(randomFood(newSnake)); // gen new food using new snake state
+          return newSnake; // eeturn newSnake to grow the snake immediately
         }
     
-        // If food is not eaten, remove the tail
+        // if food not yet eaten, remove the tail
         newSnake.pop(); 
-        return newSnake; // Return the updated snake
+        return newSnake; // return updated snake
       });
     }, 200);
 
