@@ -1,6 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
+
+# SnakeJS the game:
+
+I wanted to create a version of Snake that could run on a browser. So I made one. You can play it too, [here](https://snakejs-game.vercel.app)
+
+You can use WASD and also the arrow keys to play. On mobile, there are controls on the screen.
+
+## Screenshot of the website:
+
+
+
+## Running the website locally:
 
 First, run the development server:
 
